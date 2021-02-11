@@ -6,6 +6,8 @@ import java.io.IOException;
 public class ByteExam1 {
 
     public static void main(String[] args) {
+        // 시간 측정
+        long startTime = System.currentTimeMillis();
         FileInputStream fis = null;
         FileOutputStream fos = null;
 
@@ -34,5 +36,7 @@ public class ByteExam1 {
                 e.printStackTrace();
             }
         }
+        long endTime = System.currentTimeMillis();
+        System.out.println(endTime - startTime);
     }
 }
