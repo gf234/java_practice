@@ -4,6 +4,7 @@ import java.util.Date;
 public class DateExam {
 
     public static void main(String[] args) {
+        // Date 는 지역화에 대한 부분이 고려되지 않아 이를 보완한 Calendar 클래스가 등장 -> deprecated 된 부분이 많음
         // 기본 생성자를 사용하면 현재 시간과 날짜 정보를 가진다.
         Date date = new Date();
         System.out.println(date);
