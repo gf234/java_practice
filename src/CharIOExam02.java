@@ -1,0 +1,29 @@
+import java.io.*;
+import java.nio.Buffer;
+
+public class CharIOExam02 {
+
+    public static void main(String[] args) {
+        BufferedReader br = null;
+        PrintWriter pw = null;
+        try {
+            br = new BufferedReader(new FileReader("src/CharIOExam02.java"));
+            // PrintWriter 는 FileWriter 를 사용하지 않아도 기본으로 FileWriter 를 사용한다.
+            pw = new PrintWriter(new FileWriter("test.txt"));
+            String line = null;
+            while((line = br.readLine()) != null){
+                pw.println(line);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // IO 는 꼭 파일을 사용하고 닫아줘야한다.
+            pw.close();
+            try {
+                br.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
