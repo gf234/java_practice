@@ -1,4 +1,4 @@
-public class ThreadExam {
+public class ThreadExam1 {
 
     public static void main(String[] args) {
         MyThread1 t1 = new MyThread1("*");
